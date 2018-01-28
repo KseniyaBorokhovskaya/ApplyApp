@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ApplyDataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ApplyInfo">
+    <Key>
+      <PropertyRef Name="ApplyInfoId" />
+    </Key>
+    <Property Name="ApplyInfoId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstScore" Type="Int32" />
+    <Property Name="SecondScore" Type="Int32" />
+    <Property Name="ThirdScore" Type="Int32" />
+    <Property Name="IsOrphan" Type="Boolean" Nullable="false" />
+    <Property Name="IsGoH" Type="Boolean" Nullable="false" />
+    <Property Name="IsWithoutExam" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="FullSpecialityInfoes" Relationship="Self.SpecialitiesEntrants" FromRole="ApplyInfo" ToRole="FullSpecialityInfo" />
+  </EntityType>
+  <EntityType Name="Date">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FullSpecialityInfoes" Relationship="Self.FK_FullSpecialityInfo_Date" FromRole="Date" ToRole="FullSpecialityInfo" />
+  </EntityType>
+  <EntityType Name="Financing">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="FullSpecialityInfoes" Relationship="Self.FK_FullSpecialityInfo_Financing" FromRole="Financing" ToRole="FullSpecialityInfo" />
+  </EntityType>
+  <EntityType Name="FormOfEducation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="FullSpecialityInfoes" Relationship="Self.FK_FullSpecialityInfo_FormOfEducation" FromRole="FormOfEducation" ToRole="FullSpecialityInfo" />
+  </EntityType>
+  <EntityType Name="FullSpecialityInfo">
+    <Key>
+      <PropertyRef Name="FullspecialityId" />
+    </Key>
+    <Property Name="FullspecialityId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PlaceId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FinancingId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FormOfEducationId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SpecialityId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TermId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PrivilegesId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Capacity" Type="Int32" Nullable="false" />
+    <Property Name="DateInfoId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Color" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstSubject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SecondSubject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MinScoreFirst" Type="Int32" Nullable="false" />
+    <Property Name="MinScoreSecond" Type="Int32" Nullable="false" />
+    <Property Name="MinScoreThird" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Date" Relationship="Self.FK_FullSpecialityInfo_Date" FromRole="FullSpecialityInfo" ToRole="Date" />
+    <NavigationProperty Name="Financing" Relationship="Self.FK_FullSpecialityInfo_Financing" FromRole="FullSpecialityInfo" ToRole="Financing" />
+    <NavigationProperty Name="FormOfEducation" Relationship="Self.FK_FullSpecialityInfo_FormOfEducation" FromRole="FullSpecialityInfo" ToRole="FormOfEducation" />
+    <NavigationProperty Name="Place" Relationship="Self.FK_FullSpecialityInfo_Place" FromRole="FullSpecialityInfo" ToRole="Place" />
+    <NavigationProperty Name="Privilege" Relationship="Self.FK_FullSpecialityInfo_Privileges" FromRole="FullSpecialityInfo" ToRole="Privileges" />
+    <NavigationProperty Name="Speciality" Relationship="Self.FK_FullSpecialityInfo_Speciality" FromRole="FullSpecialityInfo" ToRole="Speciality" />
+    <NavigationProperty Name="Term" Relationship="Self.FK_FullSpecialityInfo_Term" FromRole="FullSpecialityInfo" ToRole="Term" />
+    <NavigationProperty Name="ApplyInfoes" Relationship="Self.SpecialitiesEntrants" FromRole="FullSpecialityInfo" ToRole="ApplyInfo" />
+  </EntityType>
+  <EntityType Name="Place">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="FullSpecialityInfoes" Relationship="Self.FK_FullSpecialityInfo_Place" FromRole="Place" ToRole="FullSpecialityInfo" />
+  </EntityType>
+  <EntityType Name="Privilege">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="FullSpecialityInfoes" Relationship="Self.FK_FullSpecialityInfo_Privileges" FromRole="Privileges" ToRole="FullSpecialityInfo" />
+  </EntityType>
+  <EntityType Name="Speciality">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Cipher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Speciality1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="FullSpecialityInfoes" Relationship="Self.FK_FullSpecialityInfo_Speciality" FromRole="Speciality" ToRole="FullSpecialityInfo" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Term">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="FullSpecialityInfoes" Relationship="Self.FK_FullSpecialityInfo_Term" FromRole="Term" ToRole="FullSpecialityInfo" />
+  </EntityType>
+  <Association Name="FK_FullSpecialityInfo_Date">
+    <End Role="Date" Type="Self.Date" Multiplicity="1" />
+    <End Role="FullSpecialityInfo" Type="Self.FullSpecialityInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Date">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FullSpecialityInfo">
+        <PropertyRef Name="DateInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FullSpecialityInfo_Financing">
+    <End Role="Financing" Type="Self.Financing" Multiplicity="1" />
+    <End Role="FullSpecialityInfo" Type="Self.FullSpecialityInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Financing">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FullSpecialityInfo">
+        <PropertyRef Name="FinancingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FullSpecialityInfo_FormOfEducation">
+    <End Role="FormOfEducation" Type="Self.FormOfEducation" Multiplicity="1" />
+    <End Role="FullSpecialityInfo" Type="Self.FullSpecialityInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormOfEducation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FullSpecialityInfo">
+        <PropertyRef Name="FormOfEducationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FullSpecialityInfo_Place">
+    <End Role="Place" Type="Self.Place" Multiplicity="1" />
+    <End Role="FullSpecialityInfo" Type="Self.FullSpecialityInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Place">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FullSpecialityInfo">
+        <PropertyRef Name="PlaceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FullSpecialityInfo_Privileges">
+    <End Role="Privileges" Type="Self.Privilege" Multiplicity="1" />
+    <End Role="FullSpecialityInfo" Type="Self.FullSpecialityInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Privileges">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FullSpecialityInfo">
+        <PropertyRef Name="PrivilegesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FullSpecialityInfo_Speciality">
+    <End Role="Speciality" Type="Self.Speciality" Multiplicity="1" />
+    <End Role="FullSpecialityInfo" Type="Self.FullSpecialityInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Speciality">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FullSpecialityInfo">
+        <PropertyRef Name="SpecialityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FullSpecialityInfo_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="1" />
+    <End Role="FullSpecialityInfo" Type="Self.FullSpecialityInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FullSpecialityInfo">
+        <PropertyRef Name="TermId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SpecialitiesEntrants">
+    <End Role="ApplyInfo" Type="Self.ApplyInfo" Multiplicity="*" />
+    <End Role="FullSpecialityInfo" Type="Self.FullSpecialityInfo" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="ApplyDataBaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ApplyInfoes" EntityType="Self.ApplyInfo" />
+    <EntitySet Name="Dates" EntityType="Self.Date" />
+    <EntitySet Name="Financings" EntityType="Self.Financing" />
+    <EntitySet Name="FormOfEducations" EntityType="Self.FormOfEducation" />
+    <EntitySet Name="FullSpecialityInfoes" EntityType="Self.FullSpecialityInfo" />
+    <EntitySet Name="Places" EntityType="Self.Place" />
+    <EntitySet Name="Privileges" EntityType="Self.Privilege" />
+    <EntitySet Name="Specialities" EntityType="Self.Speciality" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Terms" EntityType="Self.Term" />
+    <AssociationSet Name="FK_FullSpecialityInfo_Date" Association="Self.FK_FullSpecialityInfo_Date">
+      <End Role="Date" EntitySet="Dates" />
+      <End Role="FullSpecialityInfo" EntitySet="FullSpecialityInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FullSpecialityInfo_Financing" Association="Self.FK_FullSpecialityInfo_Financing">
+      <End Role="Financing" EntitySet="Financings" />
+      <End Role="FullSpecialityInfo" EntitySet="FullSpecialityInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FullSpecialityInfo_FormOfEducation" Association="Self.FK_FullSpecialityInfo_FormOfEducation">
+      <End Role="FormOfEducation" EntitySet="FormOfEducations" />
+      <End Role="FullSpecialityInfo" EntitySet="FullSpecialityInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FullSpecialityInfo_Place" Association="Self.FK_FullSpecialityInfo_Place">
+      <End Role="Place" EntitySet="Places" />
+      <End Role="FullSpecialityInfo" EntitySet="FullSpecialityInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FullSpecialityInfo_Privileges" Association="Self.FK_FullSpecialityInfo_Privileges">
+      <End Role="Privileges" EntitySet="Privileges" />
+      <End Role="FullSpecialityInfo" EntitySet="FullSpecialityInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FullSpecialityInfo_Speciality" Association="Self.FK_FullSpecialityInfo_Speciality">
+      <End Role="Speciality" EntitySet="Specialities" />
+      <End Role="FullSpecialityInfo" EntitySet="FullSpecialityInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FullSpecialityInfo_Term" Association="Self.FK_FullSpecialityInfo_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="FullSpecialityInfo" EntitySet="FullSpecialityInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="SpecialitiesEntrants" Association="Self.SpecialitiesEntrants">
+      <End Role="ApplyInfo" EntitySet="ApplyInfoes" />
+      <End Role="FullSpecialityInfo" EntitySet="FullSpecialityInfoes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
