@@ -1,0 +1,474 @@
+Notepad++ 7.5.3 bug-fixes:
+
+1.  Fix shell extension registration failure in installer.
+2.  Fix theme files installation failure in installer. 
+3.  Fix DSpellCheck incomplete installation in installer.
+
+
+Notepad++ 7.5.2 new features/enhancements & bug-fixes:
+
+1.  Fixed hanging issue while modifying JavaScript TAB settings.
+2.  Add DSpellCheck plugin into distribution.
+3.  Add version and other info into installer.
+4.  Fix an issue while installing a x64 version, x86 version (if it exists) is not removed - and vice versa.
+5.  Fix display glitch of certificate checking error message.
+6.  Remove unused/empty entries from shortcut mapper.
+7.  Add BaanC function list feature.
+8.  Add batch auto-completion into installer.
+
+
+Included plugins:
+
+1.  NppExport v0.2.8 (32-bit x86 only)
+2.  Converter 4.2.1
+3.  Mime Tool 2.1
+4.  DSpellCheck 1.3.2
+
+Updater (Installer only):
+
+* WinGup v4.2
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~
+$ cd desktop
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop
+$ mkdir project
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop
+$ cd project
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop/project
+$ git clone https://github.com/KseniyaBorokhovskaya/BSUIREntrants.git
+Cloning into 'BSUIREntrants'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop/project
+$ git add .
+fatal: Not a git repository (or any of the parent directories): .git
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop/project
+$ cd BSUIREntrants
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop/project/BSUIREntrants (master)
+$ git checkout -b "Branch1"
+Switched to a new branch 'Branch1'
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop/project/BSUIREntrants (Branch1)
+$ git add .
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Content/bootstrap.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Content/bootstrap.min.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/bootstrap.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/bootstrap.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/jquery-1.10.2.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/jquery-1.10.2.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/jquery.validate.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/jquery.validate.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/jquery.validate.unobtrusive.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/modernizr-2.6.2.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/respond.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/Scripts/respond.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in BSUIREntrantsWebSite/BSUIREntrantsWebSit
+e/fonts/glyphicons-halflings-regular.svg.
+The file will have its original line endings in your working directory.
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop/project/BSUIREntrants (Branch1)
+$ git commit -m "MyAwesomeCommit"
+[Branch1 161e7d3] MyAwesomeCommit
+ 52 files changed, 28164 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite.sln
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/App_Start/BundleCo
+nfig.cs
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/App_Start/FilterCo
+nfig.cs
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/App_Start/RouteCon
+fig.cs
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/ApplicationInsight
+s.config
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/BSUIREntrantsWebSi
+te.csproj
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Concrete/Universit
+yContext.cs
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Content/Site.css
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Content/bootstrap.
+css
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Content/bootstrap.
+min.css
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Controllers/Enroll
+eeController.cs
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Controllers/HomeCo
+ntroller.cs
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Global.asax
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Global.asax.cs
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Models/Enrollee.cs
+
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Properties/Assembl
+yInfo.cs
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/bootstrap.
+js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/bootstrap.
+min.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/jquery-1.1
+0.2.intellisense.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/jquery-1.1
+0.2.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/jquery-1.1
+0.2.min.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/jquery-1.1
+0.2.min.map
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/jquery.val
+idate-vsdoc.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/jquery.val
+idate.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/jquery.val
+idate.min.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/jquery.val
+idate.unobtrusive.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/jquery.val
+idate.unobtrusive.min.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/modernizr-
+2.6.2.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/respond.js
+
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Scripts/respond.mi
+n.js
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Enrollee/Cre
+ate.cshtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Enrollee/Del
+ete.cshtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Enrollee/Det
+ails.cshtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Enrollee/Edi
+t.cshtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Enrollee/Ind
+ex.cshtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Home/About.c
+shtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Home/Contact
+.cshtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Home/Index.c
+shtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Shared/Error
+.cshtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Shared/_Layo
+ut.cshtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/Web.config
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Views/_ViewStart.c
+shtml
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Web.Debug.config
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Web.Release.config
+
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/Web.config
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/favicon.ico
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/fonts/glyphicons-h
+alflings-regular.eot
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/fonts/glyphicons-h
+alflings-regular.svg
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/fonts/glyphicons-h
+alflings-regular.ttf
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/fonts/glyphicons-h
+alflings-regular.woff
+ create mode 100644 BSUIREntrantsWebSite/BSUIREntrantsWebSite/packages.config
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop/project/BSUIREntrants (Branch1)
+$ git push origin -u "Branch1"
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': KseniyaBorokhovskaya
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/KseniyaBorokhovskaya/BSUIRE
+ntrants.git/'
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop/project/BSUIREntrants (Branch1)
+$ git push origin -u "Branch1"
+Counting objects: 68, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (65/65), done.
+Writing objects: 100% (68/68), 379.24 KiB | 1.18 MiB/s, done.
+Total 68 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/KseniyaBorokhovskaya/BSUIREntrants.git
+ * [new branch]      Branch1 -> Branch1
+Branch 'Branch1' set up to track remote branch 'Branch1' from 'origin'.
+
+Бороховская Ксения@Lenovo-PC MINGW64 ~/desktop/project/BSUIREntrants (Branch1)
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+D:\EntrantsDasha\EntrantsApplication>git push origin -u "newBranch"
+remote: Permission to Dasha3108/EntrantsApplication.git denied to KseniyaBorokho
+vskaya.
+fatal: unable to access 'https://github.com/Dasha3108/EntrantsApplication.git/':
+ The requested URL returned error: 403
+
+D:\EntrantsDasha\EntrantsApplication>git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+D:\EntrantsDasha\EntrantsApplication>git accounts
+git: 'accounts' is not a git command. See 'git --help'.
+
+D:\EntrantsDasha\EntrantsApplication>git config --global --unset-all
+error: wrong number of arguments
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_rege
+x]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, com
+mand line)
+
+
+D:\EntrantsDasha\EntrantsApplication>git config --global --unset user.name
+
+D:\EntrantsDasha\EntrantsApplication>git config --global --unset user.email
+
+D:\EntrantsDasha\EntrantsApplication>git push origin -u "newBranch"
+remote: Permission to Dasha3108/EntrantsApplication.git denied to KseniyaBorokho
+vskaya.
+fatal: unable to access 'https://github.com/Dasha3108/EntrantsApplication.git/':
+ The requested URL returned error: 403
+
+D:\EntrantsDasha\EntrantsApplication>git push origin -u "newBranch"
+Counting objects: 282, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (251/251), done.
+Writing objects: 100% (282/282), 24.15 MiB | 351.00 KiB/s, done.
+Total 282 (delta 56), reused 0 (delta 0)
+remote: Resolving deltas: 100% (56/56), done.
+To https://github.com/Dasha3108/EntrantsApplication.git
+ * [new branch]      newBranch -> newBranch
+Branch 'newBranch' set up to track remote branch 'newBranch' from 'origin'.
+
+D:\EntrantsDasha\EntrantsApplication>git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+D:\EntrantsDasha\EntrantsApplication>git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+D:\EntrantsDasha\EntrantsApplication>git add .
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+
+D:\EntrantsDasha\EntrantsApplication>git commit -m "OneMoreCommit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Áîðîõîâñêàÿ Êñåíèÿ@Lenovo-PC.(n
+one)')
+
+D:\EntrantsDasha\EntrantsApplication>git cofig --global user.email "dashagurinov
+ich425@gmail.com"
+git: 'cofig' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+D:\EntrantsDasha\EntrantsApplication>git config --global user.email "dashagurino
+vich425@gmail.com"
+
+D:\EntrantsDasha\EntrantsApplication>git config --global user.name "Dasha3108"
+
+D:\EntrantsDasha\EntrantsApplication>git commit -m "OneMoreCommit"
+[newBranch 663b696] OneMoreCommit
+ 1 file changed, 418 insertions(+)
+ create mode 100644 .gitignore
+
+D:\EntrantsDasha\EntrantsApplication>git push origin -u "NewBranch"
+fatal: NewBranch cannot be resolved to branch.
+
+D:\EntrantsDasha\EntrantsApplication>git push origin -u "newBranch"
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.79 KiB | 572.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Dasha3108/EntrantsApplication.git
+   999bf3f..663b696  newBranch -> newBranch
+Branch 'newBranch' set up to track remote branch 'newBranch' from 'origin'.
+
+D:\EntrantsDasha\EntrantsApplication>git checkout -b "newBranch"
+fatal: A branch named 'newBranch' already exists.
+
+D:\EntrantsDasha\EntrantsApplication>git checkout "newBranch"
+Already on 'newBranch'
+Your branch is up to date with 'origin/newBranch'.
+
+D:\EntrantsDasha\EntrantsApplication>git commit -m "OneMoreCommit"
+On branch newBranch
+Your branch is up to date with 'origin/newBranch'.
+
+nothing to commit, working tree clean
+
+D:\EntrantsDasha\EntrantsApplication>git push origin -u "NewBranch"
+fatal: NewBranch cannot be resolved to branch.
+
+D:\EntrantsDasha\EntrantsApplication>git push origin -u "newBranch"
+Everything up-to-date
+Branch 'newBranch' set up to track remote branch 'newBranch' from 'origin'.
+
+D:\EntrantsDasha\EntrantsApplication>git push origin -u "newBranch 663b696"
+fatal: remote part of refspec is not a valid name in newBranch 663b696
+
+D:\EntrantsDasha\EntrantsApplication>git checkout "newBranch"
+Already on 'newBranch'
+Your branch is up to date with 'origin/newBranch'.
+
+D:\EntrantsDasha\EntrantsApplication>git add .
+
+D:\EntrantsDasha\EntrantsApplication>git commit -m "OneMoreCommit"
+On branch newBranch
+Your branch is up to date with 'origin/newBranch'.
+
+nothing to commit, working tree clean
+
+D:\EntrantsDasha\EntrantsApplication>git config --global --unset "Dasha3108"
+error: key does not contain a section: Dasha3108
+
+D:\EntrantsDasha\EntrantsApplication>git config --global --unset Dasha3108
+error: key does not contain a section: Dasha3108
+
+D:\EntrantsDasha\EntrantsApplication>

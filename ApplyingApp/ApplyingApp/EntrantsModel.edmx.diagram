@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="04acf93e89a94fa3b904938f6c20d4f9" Name="Diagram1">
+        <EntityTypeShape EntityType="ApplyDataBaseModel.ApplyInfo" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplyDataBaseModel.Date" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplyDataBaseModel.Financing" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplyDataBaseModel.FormOfEducation" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplyDataBaseModel.FullSpecialityInfo" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplyDataBaseModel.Place" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplyDataBaseModel.Privilege" Width="1.5" PointX="0.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplyDataBaseModel.Speciality" Width="1.5" PointX="0.75" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplyDataBaseModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplyDataBaseModel.Term" Width="1.5" PointX="0.75" PointY="21.375" IsExpanded="true" />
+        <AssociationConnector Association="ApplyDataBaseModel.FK_FullSpecialityInfo_Date" ManuallyRouted="false" />
+        <AssociationConnector Association="ApplyDataBaseModel.FK_FullSpecialityInfo_Financing" ManuallyRouted="false" />
+        <AssociationConnector Association="ApplyDataBaseModel.FK_FullSpecialityInfo_FormOfEducation" ManuallyRouted="false" />
+        <AssociationConnector Association="ApplyDataBaseModel.FK_FullSpecialityInfo_Place" ManuallyRouted="false" />
+        <AssociationConnector Association="ApplyDataBaseModel.FK_FullSpecialityInfo_Privileges" ManuallyRouted="false" />
+        <AssociationConnector Association="ApplyDataBaseModel.FK_FullSpecialityInfo_Speciality" ManuallyRouted="false" />
+        <AssociationConnector Association="ApplyDataBaseModel.FK_FullSpecialityInfo_Term" ManuallyRouted="false" />
+        <AssociationConnector Association="ApplyDataBaseModel.SpecialitiesEntrants" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
